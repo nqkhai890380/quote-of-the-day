@@ -1,0 +1,40 @@
+{
+  "name": "quote-of-the-day",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "http-server dist -p 3000",
+    "build": "esbuild --bundle src/index.tsx --outfile=dist/main.js && cp src/index.html dist/",
+    "watch": "cp src/index.html dist/ && esbuild --bundle src/index.tsx --outfile=dist/main.js --watch",
+    "cy:run": "cypress run --spec cypress/e2e/*.spec.cy.js",
+    "test": "start-server-and-test start http://localhost:3000 cy:run",
+    "lint": "eslint 'src/**'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^6.6.0",
+    "cypress": "^13.0.0",
+    "eslint": "^8.2.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-standard-with-typescript": "^39.0.0",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-n": "^16.0.2",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-react": "^7.28.0",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "http-server": "^14.1.1",
+    "start-server-and-test": "^2.0.0",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "@types/react": "^18.2.21",
+    "@types/react-dom": "^18.2.7",
+    "esbuild": "0.19.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
