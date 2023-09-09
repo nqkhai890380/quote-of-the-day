@@ -2,6 +2,10 @@ name: Build Quote Application
 on:
   push:
     branches: ["main"]
+permissions:
+  contents: read
+  pages: write
+  id-token: write
 jobs:
   build:
     name: Build Frontend Package
