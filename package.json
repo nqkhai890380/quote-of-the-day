@@ -9,7 +9,8 @@
     "watch": "cp src/index.html dist/ && esbuild --bundle src/index.tsx --outfile=dist/main.js --watch",
     "cy:run": "cypress run --spec cypress/e2e/*.spec.cy.js",
     "test": "start-server-and-test start http://localhost:3000 cy:run",
-    "lint": "eslint 'src/**'"
+    "lint": "eslint 'src/**'",
+    "prepare": "husky install"
   },
   "keywords": [],
   "author": "",
@@ -20,6 +21,7 @@
     "eslint": "^8.2.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-standard-with-typescript": "^39.0.0",
+    "eslint-import-resolver-typescript": "^3.6.0",
     "eslint-plugin-import": "^2.25.3",
     "eslint-plugin-jsx-a11y": "^6.5.1",
     "eslint-plugin-n": "^16.0.2",
@@ -28,7 +30,8 @@
     "eslint-plugin-react-hooks": "^4.3.0",
     "http-server": "^14.1.1",
     "start-server-and-test": "^2.0.0",
-    "typescript": "^5.2.2"
+    "typescript": "^5.2.2",
+    "husky": "^8.0.0"
   },
   "dependencies": {
     "@types/react": "^18.2.21",
