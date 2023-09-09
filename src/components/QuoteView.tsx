@@ -14,7 +14,8 @@ const QuoteView: React.FC<QuoteViewProps> = () => {
 
   return (
     <div>
-      {loading && quotes[index] ? <div>Loading...</div> : <QuoteContent quote={quotes[index]} />}
+      {loading || quotes.length === 0
+        ? <div>Loading...</div> : <QuoteContent quote={quotes[index]} />}
       <button onClick={() => handleNextQuote()} type="button">
         Next
       </button>

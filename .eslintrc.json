@@ -46,7 +46,8 @@
         "import/prefer-default-export": "off",
         "react/prop-types": "off",
         "linebreak-style": 0,
-        "@typescript-eslint/no-explicit-any": ["off"]
+        "@typescript-eslint/no-explicit-any": ["off"],
+        "react/require-default-props": "off"
     },
     "settings": {
         "import/resolver": {

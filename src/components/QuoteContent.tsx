@@ -7,7 +7,7 @@ interface QuoteContentProps {
 
 const QuoteContent: React.FC<QuoteContentProps> = ({ quote }) => (
   <div>
-    <p className="content">{quote && quote.content}</p>
+    <p className="content">{quote.content}</p>
     <p>
       <span className="author">
         &mdash;
