@@ -1,0 +1,19 @@
+name: Build Quote Application
+on:
+  push:
+    branches: ["main"]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out
+        uses: actions/checkout@v3
+      - name: Setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18.14.2
+          cache: npm
+      - name: Install
+        run: npm ci
+      - name: Test
+        run: npm run lint
